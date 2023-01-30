@@ -19,7 +19,7 @@ public class RotateMatrix {
 
         System.out.println("\n");
 
-        int mtrx[][] = {{1,2,3},{4,5,6},{7,8,9}};
+        int[][]mtrx = {{1,2,3},{4,5,6},{7,8,9}};
         rotMatrix(mtrx);
         for (int[] ints: mtrx) {
             for (int i = 0; i < mtrx.length; i++) {
@@ -27,6 +27,8 @@ public class RotateMatrix {
             }
             System.out.println();
         }
+
+
     }
 
 

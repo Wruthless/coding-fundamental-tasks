@@ -33,7 +33,7 @@ public class StringPermutation {
     }
 
     public static boolean testForStringPermutation(String string1, String string2) {
-        int[]arr = new int[256];
+        int[] arr = new int[256];
 
         for (int i = 0; i < string1.length(); i++) {
             arr[(int)string1.charAt(i)] += 1;
@@ -44,9 +44,7 @@ public class StringPermutation {
         }
 
         for (int i = 0; i < arr.length; i++) {
-            if (arr[i] != 0) {
-                return false;
-            }
+            if(arr[i] != 0) return false;
         }
 
         return true;

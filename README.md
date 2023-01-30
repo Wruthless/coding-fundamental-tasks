@@ -79,5 +79,8 @@ repeats until all characters have been compared, if no characters match return `
 ### FrequencyOfArrayElements.java
 - Return the number of elements stored in each array member.
 
+### InitArray.java
+- Consistently loop through a multi-dimensional array regardless of dimension or raggedness.
+
 ### RollDie.java
 - Return the frequency of faces in a die roll.

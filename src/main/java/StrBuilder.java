@@ -19,8 +19,9 @@ public class StrBuilder {
         stringBuilder1.append("One ");
         stringBuilder1.append("Two ");
         stringBuilder1.append("Three ");
-        stringBuilder1.append("Four ");
-        System.out.printf("%s%n", stringBuilder1.toString());
+        stringBuilder1.append("Four.");
+        System.out.printf("%s", stringBuilder1.toString());
+
     }
 
 

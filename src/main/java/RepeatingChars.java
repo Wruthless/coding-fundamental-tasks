@@ -38,9 +38,9 @@ public class RepeatingChars {
                     match++;
                 }
             }
-            System.out.printf("%s%s%d%n", string.charAt(i), " --- ", match);
-            String dupes = String.valueOf(string.charAt(i)).trim();
-            string = string.replace(dupes,"");
+            System.out.println(string.charAt(i) + " --- " + match);
+            String dupes = String.valueOf(string.charAt(i)) .trim();
+            string = string.replace(dupes, "");
             match = 0;
         }
     }

@@ -17,7 +17,7 @@ public class SetZeroes {
 
         System.out.println();
 
-        int[][]matrix = {{1,1,1},{1,0,1},{1,1,1}};
+        int[][] matrix = {{1,1,1},{1,0,1},{1,1,1}};
         setMatrixZero(matrix);
         for (int[] ints: matrix) {
             for (int i = 0; i < matrix.length; i++) {
@@ -51,7 +51,7 @@ public class SetZeroes {
         }
     }
 
-    public static void setMatrixZero(int[][] matrix) {
+    public static void setMatrixZero(int[][]matrix) {
         int R = matrix.length;
         int C = matrix[0].length;
         Set<Integer> row = new HashSet<Integer>();
@@ -59,7 +59,7 @@ public class SetZeroes {
 
         for (int i = 0; i < R; i++) {
             for (int j = 0; j < C; j++) {
-                if (matrix[i][j] == 0) {
+                if(matrix[i][j] == 0) {
                     row.add(i);
                     col.add(j);
                 }
@@ -68,7 +68,7 @@ public class SetZeroes {
 
         for (int i = 0; i < R; i++) {
             for (int j = 0; j < C; j++) {
-                if (row.contains(i) || col.contains(j)) {
+                if(row.contains(i) || col.contains(j)) {
                     matrix[i][j] = 0;
                 }
             }

@@ -31,7 +31,8 @@ public class FrequencyOfArrayElements {
         }
     }
 
-    public static void arrayElementFrequency(int[]responses, int[]frequency) {
+    public static void arrayElementFrequency(int[] responses, int[] frequency) {
+
         for (int i = 0; i < responses.length; i++) {
             ++frequency[responses[i]];
         }
@@ -40,4 +41,5 @@ public class FrequencyOfArrayElements {
             System.out.printf("%6d%10d%n", i, frequency[i]);
         }
     }
+
 }

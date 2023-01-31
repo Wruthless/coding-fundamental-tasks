@@ -59,7 +59,28 @@ repeats until all characters have been compared, if no characters match return `
 <br>
 
 ### RepeatingCharacters.java
-- Return the number of repeated characters in a string.
+**Return the number of repeated characters in a string.**
+
+A `String` is passed and a first loop contains an embedded loop which runs through the characters of the string
+looking for sequential matches. Once all matches have been made of the first set of characters, the first loop iterates and
+the embedded loop looks for the next group of sequential matches and so on and so forth.
+
+The second part of the first loop is primarily formatting for output and a reset of the match counter for the next
+iteration to use.
+
+```java
+    for (int i = 0; i < string.length(); i++) {
+        for (int j = 0; j < string.length(); j++) {
+            if(string.charAt(i) == string.charAt(j)) {
+                match++;
+            }
+        }
+        System.out.println(string.charAt(i) + " --- " + match);
+        String dupes = String.valueOf(string.charAt(i)).trim();
+        string = string.replace(dupes, "");
+        match = 0;
+    }
+```
 
 ### URLEncoding.java
 - Encode spaces in a URL with "%20" instead of "+".

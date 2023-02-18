@@ -105,3 +105,6 @@ iteration to use.
 
 ### RollDie.java
 - Return the frequency of faces in a die roll.
+
+### OnesComplement.java
+- Return the ones complement of number as an integer and display its binary representation.

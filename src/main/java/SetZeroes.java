@@ -17,11 +17,11 @@ public class SetZeroes {
 
         System.out.println();
 
-        int[][] matrix = {{1,1,1},{1,0,1},{1,1,1}};
-        setMatrixZero(matrix);
-        for (int[] ints: matrix) {
-            for (int i = 0; i < matrix.length; i++) {
-                System.out.printf("%d%s", ints[i], " ");
+        int[][]mtrx = {{1,1,1},{1,0,1},{1,1,1}};
+        matrixZero(mtrx);
+        for (int[] ints: mtrx) {
+            for (int i = 0; i < mtrx.length; i++) {
+                System.out.printf("%d   ", ints[i]);
             }
             System.out.println();
         }
@@ -51,11 +51,11 @@ public class SetZeroes {
         }
     }
 
-    public static void setMatrixZero(int[][]matrix) {
+    public static void matrixZero(int[][]matrix){
         int R = matrix.length;
         int C = matrix[0].length;
-        Set<Integer> row = new HashSet<Integer>();
-        Set<Integer> col = new HashSet<Integer>();
+        Set<Integer>row = new HashSet<Integer>();
+        Set<Integer>col = new HashSet<Integer>();
 
         for (int i = 0; i < R; i++) {
             for (int j = 0; j < C; j++) {
@@ -65,7 +65,6 @@ public class SetZeroes {
                 }
             }
         }
-
         for (int i = 0; i < R; i++) {
             for (int j = 0; j < C; j++) {
                 if(row.contains(i) || col.contains(j)) {
@@ -73,5 +72,6 @@ public class SetZeroes {
                 }
             }
         }
+
     }
 }

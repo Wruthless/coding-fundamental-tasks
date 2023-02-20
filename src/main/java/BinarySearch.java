@@ -37,9 +37,9 @@ public class BinarySearch {
         return -1;
     }
 
-    public static int binarySearch(int[] arr, int x) {
+    public static int binarySearch(int[]arr, int x) {
         int low = 0;
-        int high = (arr.length) - 1;
+        int high = arr.length - 1;
         Arrays.sort(arr);
 
         while (low <= high) {

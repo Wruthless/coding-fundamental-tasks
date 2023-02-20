@@ -18,11 +18,13 @@ public class RotatedString {
     public static boolean testForStringRotation(String string1, String string2) {
         String concat = string1 + string1;
         return concat.contains(string2);
+
     }
 
     public static boolean stringRotationTest(String string1, String string2) {
         String concat = string1 + string1;
         return concat.contains(string2);
     }
+
 }
 

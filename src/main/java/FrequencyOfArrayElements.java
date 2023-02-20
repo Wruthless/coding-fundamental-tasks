@@ -38,8 +38,7 @@ public class FrequencyOfArrayElements {
         }
 
         for (int i = 1; i < frequency.length; i++) {
-            System.out.printf("%6d%10d%n", i, frequency[i]);
+            System.out.printf("%4d%10d%n", i, frequency[i]);
         }
     }
-
 }

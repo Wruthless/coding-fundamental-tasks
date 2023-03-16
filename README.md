@@ -108,3 +108,6 @@ iteration to use.
 
 ### OnesComplement.java
 - Return the ones complement of number as an integer and display its binary representation.
+
+### ShuffleDeckOfCards.java
+- Classic card shuffling program.

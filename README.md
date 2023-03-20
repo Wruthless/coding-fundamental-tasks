@@ -111,3 +111,6 @@ iteration to use.
 
 ### ShuffleDeckOfCards.java
 - Classic card shuffling program.
+
+### WordTypeCount.java
+- Using a map to count the occurrences of words in user input.

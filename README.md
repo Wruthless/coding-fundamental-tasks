@@ -11,9 +11,9 @@ the value stored at the related index.
 
 
 ```java
-    for (int i = 0; i < string1.length(); i++) {
-        arr[(int) string1.charAt(i)] += 1;
-    }
+for (int i = 0; i < string1.length(); i++) {
+    arr[(int) string1.charAt(i)] += 1;
+}
 ```
 
 
@@ -21,18 +21,18 @@ The second loop iterates through the characters in the second string. For every 
 decrement the value at the related index.
  
 ```java
-    for (int i = 0; i < string2.length(); i++) {
-        arr[(int) string2.charAt(i)]  -= 1;
-    }
+for (int i = 0; i < string2.length(); i++) {
+    arr[(int) string2.charAt(i)]  -= 1;
+}
 ```
 
 The third loop checks the array for non-zero values, if non-zero values exist the value was not decremented
 due to a match in the opposing string so return `false`.
 
 ```java
-    for (int i = 0; i < arr.length; i++) {
-        if(arr[i] != 0) return false;
-    }
+for (int i = 0; i < arr.length; i++) {
+    if(arr[i] != 0) return false;
+}
 ```
 <br>
 
@@ -45,16 +45,16 @@ and the body compares the two -- returning false if the two characters match. Th
 repeats until all characters have been compared, if no characters match return `true`.
 
 ```java
-    public static boolean testForUniqueCharacters(String string) {
-        for (int i = 0; i < string.length(); i++) {
-            for (int j = i+1; j < string.length(); j++) {
-                if(string.charAt(i) == string.charAt(j)) {
-                    return false;
-                }
+public static boolean testForUniqueCharacters(String string) {
+    for (int i = 0; i < string.length(); i++) {
+        for (int j = i+1; j < string.length(); j++) {
+            if(string.charAt(i) == string.charAt(j)) {
+                return false;
             }
         }
-        return true;
     }
+    return true;
+}
 ```
 <br>
 
@@ -69,21 +69,32 @@ The second part of the first loop is primarily formatting for output and a reset
 iteration to use.
 
 ```java
-    for (int i = 0; i < string.length(); i++) {
-        for (int j = 0; j < string.length(); j++) {
-            if(string.charAt(i) == string.charAt(j)) {
-                match++;
-            }
+for (int i = 0; i < string.length(); i++) {
+    for (int j = 0; j < string.length(); j++) {
+        if(string.charAt(i) == string.charAt(j)) {
+            match++;
         }
-        System.out.println(string.charAt(i) + " --- " + match);
-        String dupes = String.valueOf(string.charAt(i)).trim();
-        string = string.replace(dupes, "");
-        match = 0;
     }
+    System.out.println(string.charAt(i) + " --- " + match);
+    String dupes = String.valueOf(string.charAt(i)).trim();
+    string = string.replace(dupes, "");
+    match = 0;
+}
 ```
+<br>
 
 ### URLEncoding.java
-- Encode spaces in a URL with "%20" instead of "+".
+**Encode spaces in a URL with "%20" instead of "+".**
+
+Super simple. A `String` representing the URL is passed and the input is simply stripped of trailing space, and Java's
+standard `replace` method is used to encode the space.
+
+```java
+public static String encUrl(String input) {
+        return input.stripTrailing().replace(" ", "%20");
+    }
+```
+<br>
 
 ### StrBuilder.java
 - Uses the StringBuilder class for string manipulation to avoid copies.

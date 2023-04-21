@@ -125,3 +125,6 @@ public static String encUrl(String input) {
 
 ### WordTypeCount.java
 - Using a map to count the occurrences of words in user input.
+
+### datastructures/Stack.java, StackImpl.java
+- A generic based stack data structure with an implementation.
